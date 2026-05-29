@@ -1,0 +1,91 @@
+/* Add CSS styles for your web site here and use them in index.html. */
+/* Add a black background color to the top navigation */
+.topnav {
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: right;
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  color: rgb(47, 145, 163);
+}
+
+#headshot{
+  border-radius: 50%;
+  height:150px;
+}
+
+.flex-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.col{
+  margin-right: 30px;
+}
+
+#resume-button{
+  background-color: rgb(47, 145, 163);
+  border-style: none;
+  border-radius: 5px;
+  color:white;
+  padding: 8px;
+}
+
+#resume-button:hover{
+  background-color: rgb(6, 63, 86);
+}
+
+.project_section{
+  background-color: rgb(47, 145, 163);
+}
+
+#project_title{
+  color: rgb(255, 255, 255);
+  margin-left: 10px;
+  margin-top: 50px;
+}
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.project {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 10px;
+    margin-bottom:10px;
+    background-color: #f9f9f9;
+}
+
+.project img {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.skill{
+  border:none;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: rgb(76, 157, 76);
+  color: white;
+}
