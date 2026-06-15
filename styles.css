@@ -1,13 +1,32 @@
 /* Add CSS styles for your web site here and use them in index.html. */
 /* Add a black background color to the top navigation */
+body{
+  margin: 0;
+}
+
+#about,
+#project_section,
+#certifications,
+#experiences,
+#contact {
+  scroll-margin-top: 60px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 .topnav {
   overflow: hidden;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #0a2472;
+  display: flex;
+  justify-content: flex-end;
 }
 
 /* Style the links inside the navigation bar */
 .topnav a {
-  float: right;
-  color: #000000;
+  color: #ffffff;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -26,12 +45,58 @@
 
 .flex-container{
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
 }
 
-.col{
-  margin-right: 30px;
+#about{
+  margin-bottom: 50px;
+}
+
+#contact{
+  padding-top: 0.5em;
+  background-color: #00072D;
+  color: white;
+}
+
+.contact-links{
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.btn-outline-primary {
+  color: rgb(47, 145, 163);
+  border-color: rgb(47, 145, 163);
+}
+
+.btn-outline-primary:hover {
+  background-color: rgb(6, 63, 86);
+  border-color: rgb(6, 63, 86);
+  color: white;
+}
+
+.certs{
+  display:flex;
+  margin: 1em;
+  justify-content: center;
+  gap: 10px;
+}
+
+.cert-card {
+  width: 300px;
+  padding: 25px;
+  background-color: white;
+  border-radius: 12px;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cert-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 #resume-button{
@@ -46,40 +111,40 @@
   background-color: rgb(6, 63, 86);
 }
 
-.project_section{
+#project_section{
+  margin-top: 60px;
   background-color: rgb(47, 145, 163);
 }
 
 #project_title{
   color: rgb(255, 255, 255);
   margin-left: 10px;
-  margin-top: 50px;
 }
 
-#projects {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    margin: 2rem 0;
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem 0;
 }
 
 .project {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    padding: 1.5rem;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    margin: 10px;
-    margin-bottom:10px;
-    background-color: #f9f9f9;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin: 10px;
+  margin-bottom:10px;
+  background-color: #f9f9f9;
 }
 
 .project img {
-    width: 150px;
-    height: auto;
-    border-radius: 8px;
-    object-fit: cover;
+  width: 150px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
 }
 
 .skill{
@@ -88,4 +153,44 @@
   border-radius: 10px;
   background-color: rgb(76, 157, 76);
   color: white;
+}
+
+.experience-container{
+  margin: 15px;
+}
+
+.experience{
+  position: relative;
+  padding: 5px;
+  border-left: 2px solid rgb(57, 57, 57);
+}
+
+.experience:hover{
+  position: relative;
+  padding: 5px;
+  border-left: 2px solid rgb(76, 157, 76);
+}
+
+.experience::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: rgb(47, 145, 163);
+  border-radius: 50%;
+  left: -7px; /* centers circle on border */
+  top: 0;
+}
+
+/* Initial state before the element enters the viewport */
+.projects-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Target state when the element enters the viewport */
+.projects-scroll.show {
+  opacity: 1;
+  transform: translateY(0);
 }
