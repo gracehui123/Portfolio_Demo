@@ -19,18 +19,71 @@
             <a href="#contact">Contact</a>
         </div>
 
-        <div class="main">
-            <div id="about" class="flex-container">
-                <div class="col">
-                    <h2>Hi, my name is Grace Hui</h2>
-                    <p>I am a senior studying computer science and information technology & web science at Rensselaer Polytechnic Institute. I am a current intern at SMBC.</p>
+        <div class="Main" id="Main">
+            <div id="button-container">
+                <button id="mode-button" onclick="toggleMode()">Light/Dark Mode</button>
+            </div>
+            
+            <div class="container about">
+                <div class="about-content">
+                    <h1 class="about-title">Hi, my name is First Last</h1>
+                    <p>I am a senior studying computer science and information technology & web science at Rensselaer Polytechnic Institute. 
+                        I enjoy using machine learning, data, and web development to build software application.
+                    </p>
+                    
                     <a href="resume_example.pdf" download>
                         <button id="resume-button">Download Resume</button>
                     </a>
                 </div>
-                <div class="col">
-                    <img id="headshot" alt="headshot" src="headshot.jpg">
+                
+                <img class="about-image" alt="headshot" src="headshot.png">
+            </div>
+
+            <div id="skills">
+                <div class="section-heading">
+                    <h2 id="skills-title">Skills</h2>
                 </div>
+
+                <div class="skills-layout">
+                    <div class="skill-group">
+                        <h3 class="skill-name">Languages</h3>
+                        <ul class="skill-tags">
+                            <li>Python</li>
+                            <li>Java</li>
+                            <li>C++</li>
+                            <li>C</li>
+                            <li>JavaScript</li>
+                            <li>TypeScript</li>
+                            <li>R</li>
+                            <li>SQL</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-group">
+                        <h3 class="skill-name">Frameworks and Tools</h3>
+                        <ul class="skill-tags">
+                            <li>HTML/CSS</li>
+                            <li>React</li>
+                            <li>API</li>
+                            <li>MySQL</li>
+                            <li>Node.js</li>
+                            <li>MongoDB</li>
+                            <li>Express</li>
+                            <li>Flask</li>
+                            <li>Git/GitHub</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-group">
+                        <h3 class="skill-name">Cloud Services and Project Management</h3>
+                        <ul class="skill-tags">
+                            <li>AWS</li>
+                            <li>Azure</li>
+                            <li>Agile (Scrum)</li>
+                        </ul>
+                    </div>
+                </div>
+            
             </div>
 
             <div id="project_section">
@@ -76,16 +129,16 @@
             </div>
 
             <div id="certifications">
-                <h2>Certifications</h2>
+                <h2 id="cert-title">Certifications</h2>
                 <hr>
                 <div class="certs">
                     <div class="cert-card">
-                        <h3>ISC2 Certified in Cybersecurity (CC)</h3>
+                        <h3>Cert #1</h3>
                         <a href="" class="btn btn-outline-primary" target="_blank" rel="noopener noreferrer">View Credential</a>
                     </div>
 
                     <div class="cert-card">
-                        <h3>Oracle AI Foundations Associate</h3>
+                        <h3>Cert #2</h3>
                         <a href="" class="btn btn-outline-primary" target="_blank" rel="noopener noreferrer">View Credential</a>
                     </div>
                 </div>
@@ -123,8 +176,12 @@
 
             </div>
         </div>
-        
-        
-        <div></div>
+
     </body>
 </html>
+
+<script>
+    function toggleMode() {
+        document.body.classList.toggle("dark-mode");
+    }
+</script>
